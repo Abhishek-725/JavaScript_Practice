@@ -35,13 +35,30 @@
 // console.log(2);
 // console.log('end');
 
-function counter() {
-    let count = 0;
-    return function(){
-        console.log(++count);
+// function counter() {
+//     let count = 0;
+//     return function(){
+//         console.log(++count);
+//     }
+// }
+// let count = counter();
+// for (let i = 0; i < 4; i++) {
+//     count();
+// }
+
+
+let obj3 = {
+    name :"Abhi",
+    age : 34,
+    address : "ABhjdjwd",
+    aadhar : undefined
+}
+
+Object.keys(obj3).map((value) => {
+    if (obj3[value] === undefined) {
+        delete obj3[value];
     }
-}
-let count = counter();
-for (let i = 0; i < 4; i++) {
-    count();
-}
+})
+console.log(obj3);
+
+
